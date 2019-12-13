@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bpole/CLionProjects/lem_visual/ft_printf/ft_printf.h
+stdarg.h
+-
+libft/libft.h
+/Users/bpole/CLionProjects/lem_visual/ft_printf/libft/libft.h
+
+/Users/bpole/CLionProjects/lem_visual/ft_printf/libft/libft.h
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+fcntl.h
+/Users/bpole/CLionProjects/lem_visual/ft_printf/libft/fcntl.h
+
+/Users/bpole/CLionProjects/lem_visual/lem_visual.h
+ft_printf/ft_printf.h
+/Users/bpole/CLionProjects/lem_visual/ft_printf/ft_printf.h
+
+/Users/bpole/CLionProjects/lem_visual/main.c
+lem_visual.h
+/Users/bpole/CLionProjects/lem_visual/lem_visual.h
+

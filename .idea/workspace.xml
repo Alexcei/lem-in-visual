@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="lem_visual" targetName="lem_visual" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d7fcf4cd-7358-4d1d-9e12-aa735eda51a0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ft_printf/libft/libft.h" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf/libft/libft.h" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/ft_printf" />
+  </component>
+  <component name="ProjectId" id="1Usie21s3nRiLOJF7xHbCFnv0V6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="lem_visual" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="test" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="lem_visual" TARGET_NAME="lem_visual" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="lem_visual" RUN_TARGET_NAME="lem_visual">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d7fcf4cd-7358-4d1d-9e12-aa735eda51a0" name="Default Changelist" comment="" />
+      <created>1576151794921</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576151794921</updated>
+      <workItem from="1576151796624" duration="4792000" />
+      <workItem from="1576167492507" duration="505000" />
+      <workItem from="1576267172684" duration="10547000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="790" y="518" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576278476423">
+      <screen x="0" y="23" width="2491" height="1417" />
+    </state>
+    <state x="790" y="518" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2491.1417@0.23.2491.1417" timestamp="1576278476423" />
+    <state width="738" height="1071" key="GridCell.Tab.0.bottom" timestamp="1576278516773">
+      <screen x="0" y="23" width="2491" height="1417" />
+    </state>
+    <state width="2178" height="411" key="GridCell.Tab.0.bottom/0.23.2489.1417@0.23.2489.1417" timestamp="1576277682210" />
+    <state width="738" height="1071" key="GridCell.Tab.0.bottom/0.23.2491.1417@0.23.2491.1417" timestamp="1576278516773" />
+    <state width="738" height="1071" key="GridCell.Tab.0.center" timestamp="1576278516773">
+      <screen x="0" y="23" width="2491" height="1417" />
+    </state>
+    <state width="2178" height="411" key="GridCell.Tab.0.center/0.23.2489.1417@0.23.2489.1417" timestamp="1576277682209" />
+    <state width="738" height="1071" key="GridCell.Tab.0.center/0.23.2491.1417@0.23.2491.1417" timestamp="1576278516773" />
+    <state width="738" height="1071" key="GridCell.Tab.0.left" timestamp="1576278516772">
+      <screen x="0" y="23" width="2491" height="1417" />
+    </state>
+    <state width="2178" height="411" key="GridCell.Tab.0.left/0.23.2489.1417@0.23.2489.1417" timestamp="1576277682208" />
+    <state width="738" height="1071" key="GridCell.Tab.0.left/0.23.2491.1417@0.23.2491.1417" timestamp="1576278516772" />
+    <state width="738" height="1071" key="GridCell.Tab.0.right" timestamp="1576278516773">
+      <screen x="0" y="23" width="2491" height="1417" />
+    </state>
+    <state width="2178" height="411" key="GridCell.Tab.0.right/0.23.2489.1417@0.23.2489.1417" timestamp="1576277682210" />
+    <state width="738" height="1071" key="GridCell.Tab.0.right/0.23.2491.1417@0.23.2491.1417" timestamp="1576278516773" />
+    <state width="2178" height="411" key="GridCell.Tab.1.bottom" timestamp="1576278252280">
+      <screen x="0" y="23" width="2491" height="1417" />
+    </state>
+    <state width="2178" height="411" key="GridCell.Tab.1.bottom/0.23.2489.1417@0.23.2489.1417" timestamp="1576277682211" />
+    <state width="2178" height="411" key="GridCell.Tab.1.bottom/0.23.2491.1417@0.23.2491.1417" timestamp="1576278252280" />
+    <state width="2178" height="411" key="GridCell.Tab.1.center" timestamp="1576278252280">
+      <screen x="0" y="23" width="2491" height="1417" />
+    </state>
+    <state width="2178" height="411" key="GridCell.Tab.1.center/0.23.2489.1417@0.23.2489.1417" timestamp="1576277682211" />
+    <state width="2178" height="411" key="GridCell.Tab.1.center/0.23.2491.1417@0.23.2491.1417" timestamp="1576278252280" />
+    <state width="2178" height="411" key="GridCell.Tab.1.left" timestamp="1576278252279">
+      <screen x="0" y="23" width="2491" height="1417" />
+    </state>
+    <state width="2178" height="411" key="GridCell.Tab.1.left/0.23.2489.1417@0.23.2489.1417" timestamp="1576277682211" />
+    <state width="2178" height="411" key="GridCell.Tab.1.left/0.23.2491.1417@0.23.2491.1417" timestamp="1576278252279" />
+    <state width="2178" height="411" key="GridCell.Tab.1.right" timestamp="1576278252280">
+      <screen x="0" y="23" width="2491" height="1417" />
+    </state>
+    <state width="2178" height="411" key="GridCell.Tab.1.right/0.23.2489.1417@0.23.2489.1417" timestamp="1576277682211" />
+    <state width="2178" height="411" key="GridCell.Tab.1.right/0.23.2491.1417@0.23.2491.1417" timestamp="1576278252280" />
+  </component>
+</project>
