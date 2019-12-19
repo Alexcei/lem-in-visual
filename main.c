@@ -1,153 +1,85 @@
-#include "lem_visual.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wtorwold <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/09 14:50:34 by wtorwold          #+#    #+#             */
+/*   Updated: 2019/12/19 02:40:02 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static int	get_ant(t_lem *lem)
+#include "lem_in.h"
+
+static int		fdf_close(void *data)
 {
-	get_next_line(lem->fd, &lem->line);
-	if (!lem->line)
+	(void)data;
+	exit(EXIT_SUCCESS);
+}
+
+static int		fdf_init(t_data *data, t_mouse  *mouse, t_camera *camera)
+{
+	ft_bzero(camera, sizeof(t_camera));
+	ft_bzero(mouse, sizeof(t_mouse));
+	ft_bzero(data, sizeof(t_data));
+	data->camera = camera;
+	data->mouse = mouse;
+	if (!(data->mlx = mlx_init()) ||
+		!(data->win = mlx_new_window(data->mlx, WIDTH, HEIGHT, "FDF")) ||
+		!(data->img = mlx_new_image(data->mlx, WIDTH, HEIGHT)))
 		return (0);
-	lem->ants = ft_atoi(lem->line);
-	ft_memdel((void*)&lem->line);
+	data->data_addr = mlx_get_data_addr(data->img, &data->bits_per_pixel,
+										&data->size_line, &data->endian);
+	data->camera->x_offset = WIDTH / 2;
+	data->camera->y_offset = HEIGHT / 2;
+	data->camera->polygon = 1;
 	return (1);
 }
 
-int 	ft_arr_count(char **arr)
+int				main(int ac, char **av)
 {
-	int 	res;
-
-	res = 0;
-	if (arr && *arr)
-	{
-		while (arr[res])
-			res++;
-	}
-	return (res);
-}
-
-void	add_rooms(t_lem *lem, int *flag)
-{
-	t_rooms		*room;
-
-	room = ft_rooms_new(NULL);
-	room->name = ft_strdup(lem->arr[0]);
-	room->x = ft_atoi(lem->arr[1]);
-	room->y = ft_atoi(lem->arr[2]);
-	ft_rooms_push_back(&lem->rooms, room);
-	if (*flag == 1)
-		lem->start = room;
-	if (*flag == 2)
-		lem->end = room;
-	*flag = 0;
-	ft_free_char_arr(&lem->arr);
-}
-
-void	get_rooms(t_lem *lem)
-{
-	int		flag;
-
-	flag = 0;
-	while (get_next_line(lem->fd, &lem->line))
-	{
-		if (ft_strnequ(lem->line, "##start", 7) && (flag = 1))
-		{
-			ft_memdel((void*)&lem->line);
-			continue;
-		}
-		else if (ft_strnequ(lem->line, "##end", 5) && (flag = 2))
-		{
-			ft_memdel((void*)&lem->line);
-			continue;
-		}
-		else if (ft_strnequ(lem->line, "#", 1))
-		{
-			ft_memdel((void*)&lem->line);
-			continue;
-		}
-		lem->arr = ft_double_split(lem->line, ' ', '-');
-		ft_memdel((void*)&lem->line);
-		if (ft_arr_count(lem->arr) == 3)
-			add_rooms(lem, &flag);
-		else
-			break ;
-	}
-}
-
-void			add_connect(t_lem *lem)
-{
-	t_rooms		*rooms;
-	t_rooms		*src;
-	t_rooms		*dst;
-
-	src = NULL;
-	dst = NULL;
-	rooms = lem->rooms;
-	while (rooms)
-	{
-		if (ft_strcmp(lem->arr[0], rooms->name) == 0)
-			src = rooms;
-		else if (ft_strcmp(lem->arr[1], rooms->name) == 0)
-			dst = rooms;
-		if (src && dst)
-			break ;
-		rooms = rooms->next;
-	}
-	if (!src || !dst)
-		print_error("ERROR - links name dosn't consist in rooms");
-	ft_connect_push_back(&src->connect, ft_connect_new(dst));
-	lem->count_connect++;
-	ft_free_char_arr(&lem->arr);
-}
-
-void	get_connect(t_lem *lem)
-{
-	if (ft_arr_count(lem->arr) == 2)
-		add_connect(lem);
-	while (get_next_line(lem->fd, &lem->line))
-	{
-		if (ft_strnequ(lem->line, "#", 1))
-		{
-			ft_memdel((void *) &lem->line);
-			continue;
-		}
-		lem->arr = ft_strsplit(lem->line, '-');
-		ft_memdel((void*)&lem->line);
-		if (ft_arr_count(lem->arr) == 2)
-			add_connect(lem);
-		else
-			break ;
-	}
-}
-
-void	ft_len_read(t_lem *lem)
-{
-	if (!get_ant(lem))
-		print_error("ERROR: non ant");
-	get_rooms(lem);
-	get_connect(lem);
-}
-
-void	print_graf(t_lem lem)
-{
-	while (lem.rooms)
-	{
-		ft_printf("name -%6s number -%2d  bfs %10d  out %d  in %d\n", lem.rooms->name, lem.rooms->number, lem.rooms->bfs, lem.rooms->out, lem.rooms->in);
-		lem.rooms = lem.rooms->next;
-	}
-	ft_printf("%d\n", lem.count_connect);
-	ft_printf("\n");
-}
-
-int		main(int ac, char **av)
-{
-	t_lem	lem;
+	t_camera	camera;
+	t_mouse 	mouse;
+	t_data		data;
+	t_lem		lem;
 
 	ft_bzero(&lem, sizeof(t_lem));
-	if (ac == 2)
-		lem.fd = open(av[1], O_RDONLY);
-	ft_len_read(&lem);
+	if (!fdf_init(&data, &mouse, &camera))
+		ft_error("error: initialization");
 
-	ft_printf("%d\n", lem.ants);
-	print_graf(lem);
+	if (av[2] != NULL && (ft_strcmp(av[2], "-v") == 0))
+		lem.v = 1;
+	if (ac != 2 && lem.v == 0)
+		ft_error("ERROR: Usage : ./lem-in < <filename>");
+	else if (ac != 3 && lem.v == 1)
+		ft_error("ERROR: Usage : ./lem-in < <filename> [-v]");
+	if ((lem.fd = open(av[1], O_RDONLY)) < 0)
+		ft_error("Open error");
 
+//	if (ac == 2 && (ft_strcmp(av[1], "-v") == 0))
+//		lem.v = 1;
+//	if (ac != 1 && lem.v == 0)
+//		ft_error("ERROR: Usage : ./lem-in < <filename>");
+//	else if (ac != 2 && lem.v == 1)
+//		ft_error("ERROR: Usage : ./lem-in < <filename> [-v]");
+
+	ft_parse_file(&lem);
+	ft_bfs(&lem);
+	find_way(&lem);
+	if (!lem.way)
+		ft_error("ERROR: no solve");
+	//ft_print_save(&lem);
+
+	mlx_key_hook(data.win, lem_hook_keydown, &data);
+	mlx_hook(data.win, 17, 0, fdf_close, &data);
+	mlx_hook(data.win, 4, 0, lem_mouse_press, &data);
+	mlx_hook(data.win, 5, 0, lem_mouse_release, &data);
+	mlx_hook(data.win, 6, 0, lem_mouse_move, &data);
+	mlx_loop_hook(data.mlx, lem_loop_key_hook, &data);
+	mlx_loop(&data.mlx);
+
+	ft_ant_moves(&lem);
 	free_all(&lem);
 	return (0);
 }

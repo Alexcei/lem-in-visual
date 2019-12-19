@@ -1,14 +1,26 @@
-#include "lem_visual.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/19 00:57:49 by bpole             #+#    #+#             */
+/*   Updated: 2019/12/19 00:57:59 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	print_error(char *message)
+#include "lem_in.h"
+
+void		ft_error(char *message)
 {
-	ft_putendl_fd(message, 0);
+	ft_putendl_fd(message, 2);
 	exit(EXIT_FAILURE);
 }
 
-void			ft_free_char_arr(char ***arr)
+void		ft_free_char_arr(char ***arr)
 {
-	int			i;
+	int		i;
 
 	i = 0;
 	if (*arr)
@@ -20,44 +32,11 @@ void			ft_free_char_arr(char ***arr)
 	}
 }
 
-static void		free_connect(t_connect *connect)
+void		ft_swap(void **a, void **b)
 {
-	t_connect		*tmp;
+	void	*tmp_a;
 
-	while (connect)
-	{
-		tmp = connect;
-		connect = connect->next;
-		ft_memdel((void*)&tmp);
-	}
-}
-
-static void		free_rooms(t_rooms *rooms)
-{
-	t_rooms		*tmp_rooms;
-
-	if (!rooms)
-		return ;
-	while (rooms)
-	{
-		tmp_rooms = rooms;
-		if (tmp_rooms->name)
-			ft_strdel(&tmp_rooms->name);
-		if (tmp_rooms->name)
-			ft_strdel(&tmp_rooms->name);
-		if (tmp_rooms->connect)
-			free_connect(tmp_rooms->connect);
-		rooms = rooms->next;
-		ft_memdel((void*)&tmp_rooms);
-	}
-}
-
-void	free_all(t_lem *lem)
-{
-	if (lem->rooms)
-		free_rooms(lem->rooms);
-	if (lem->line)
-		ft_strdel(&lem->line);
-	if (lem->arr)
-		ft_free_char_arr(&lem->arr);
+	tmp_a = *a;
+	*a = *b;
+	*b = tmp_a;
 }

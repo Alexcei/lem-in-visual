@@ -1,4 +1,16 @@
-#include "lem_visual.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lib_connect.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/18 22:40:55 by bpole             #+#    #+#             */
+/*   Updated: 2019/12/19 00:54:18 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "lem_in.h"
 
 t_connect		*ft_connect_new(t_rooms *rooms)
 {
@@ -11,9 +23,9 @@ t_connect		*ft_connect_new(t_rooms *rooms)
 	return (res);
 }
 
-void  			ft_connect_push_back(t_connect **begin_list, t_connect *new)
+void			ft_connect_push_back(t_connect **begin_list, t_connect *new)
 {
-	t_connect  *last;
+	t_connect	*last;
 
 	if (!*begin_list)
 	{
@@ -40,71 +52,23 @@ void			ft_connect_add(t_connect **alst, t_connect *new)
 	}
 }
 
-void 		ft_connect_clear(t_connect **begin_list)
+void			ft_connect_sort(t_connect **begin_list)
 {
-	t_connect *temp;
+	t_connect	*current;
+	int			tr;
 
-	while (*begin_list)
+	tr = 1;
+	while (tr--)
 	{
-		temp = *begin_list;
-		*begin_list = (*begin_list)->next;
-		free(temp);
-	}
-	*begin_list = NULL;
-}
-
-void	ft_connect_remove_if(t_connect **begin_list, int bfs, int (*cmp)())
-{
-	t_connect  *privios;
-	t_connect  *current;
-
-	current = *begin_list;
-	privios = NULL;
-	while (current)
-	{
-		if (!cmp(current->rooms, bfs))
+		current = *begin_list;
+		while (current && current->next)
 		{
-			if (current == *begin_list)
+			if (current->rooms->bfs > current->next->rooms->bfs)
 			{
-				*begin_list = current->next;
-				free(current);
-				current = *begin_list;
+				ft_swap((void*)&current->rooms, (void*)&current->next->rooms);
+				tr = 1;
 			}
-			else
-			{
-				privios->next = current->next;
-				free(current);
-				current = privios;
-			}
-		}
-		else
-		{
-			privios = current;
 			current = current->next;
 		}
-	}
-}
-
-void	ft_connect_remove_if1(t_connect **begin_list, int bfs, int (*cmp)())
-{
-	t_connect	*remove;
-	t_connect	*current;
-
-	current = *begin_list;
-	while (current && current->next)
-	{
-		if ((*cmp)(current->rooms, bfs) == 0)
-		{
-			remove = current->next;
-			current->next = current->next->next;
-			free(remove);
-		}
-		current = current->next;
-	}
-	current = *begin_list;
-	if (current && (*cmp)(current->rooms, bfs) == 0)
-	{
-		*begin_list = current->next;
-		free(current);
 	}
 }

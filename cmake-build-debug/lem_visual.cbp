@@ -80,7 +80,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/bpole/CLionProjects/lem_visual/double_split.c">
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/ant_moves.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/bfs.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/bresenhem.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/control.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/creat_image.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/find_way.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/free_all.c">
 			<Option target="lem_visual"/>
 		</Unit>
 		<Unit filename="/Users/bpole/CLionProjects/lem_visual/ft_printf/bonus_wildcard.c">
@@ -317,7 +335,7 @@
 		<Unit filename="/Users/bpole/CLionProjects/lem_visual/ft_printf/parser.c">
 			<Option target="lem_visual"/>
 		</Unit>
-		<Unit filename="/Users/bpole/CLionProjects/lem_visual/lem_visual.h">
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/lem_in.h">
 			<Option target="lem_visual"/>
 		</Unit>
 		<Unit filename="/Users/bpole/CLionProjects/lem_visual/lib_connect.c">
@@ -326,10 +344,43 @@
 		<Unit filename="/Users/bpole/CLionProjects/lem_visual/lib_room.c">
 			<Option target="lem_visual"/>
 		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/loop_key_hook.c">
+			<Option target="lem_visual"/>
+		</Unit>
 		<Unit filename="/Users/bpole/CLionProjects/lem_visual/main.c">
 			<Option target="lem_visual"/>
 		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/mouse_press.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/parse.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/parse_link.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/parse_rooms.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/print_result.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/render.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/transform.c">
+			<Option target="lem_visual"/>
+		</Unit>
 		<Unit filename="/Users/bpole/CLionProjects/lem_visual/utils.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/valid_links.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/valid_rooms.c">
+			<Option target="lem_visual"/>
+		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/lem_visual/valid_rooms2.c">
 			<Option target="lem_visual"/>
 		</Unit>
 		<Unit filename="/Users/bpole/CLionProjects/lem_visual/CMakeLists.txt">

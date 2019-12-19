@@ -123,32 +123,194 @@ lem_visual/fast:
 	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/build
 .PHONY : lem_visual/fast
 
-double_split.o: double_split.c.o
+ant_moves.o: ant_moves.c.o
 
-.PHONY : double_split.o
+.PHONY : ant_moves.o
 
 # target to build an object file
-double_split.c.o:
-	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/double_split.c.o
-.PHONY : double_split.c.o
+ant_moves.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/ant_moves.c.o
+.PHONY : ant_moves.c.o
 
-double_split.i: double_split.c.i
+ant_moves.i: ant_moves.c.i
 
-.PHONY : double_split.i
+.PHONY : ant_moves.i
 
 # target to preprocess a source file
-double_split.c.i:
-	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/double_split.c.i
-.PHONY : double_split.c.i
+ant_moves.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/ant_moves.c.i
+.PHONY : ant_moves.c.i
 
-double_split.s: double_split.c.s
+ant_moves.s: ant_moves.c.s
 
-.PHONY : double_split.s
+.PHONY : ant_moves.s
 
 # target to generate assembly for a file
-double_split.c.s:
-	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/double_split.c.s
-.PHONY : double_split.c.s
+ant_moves.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/ant_moves.c.s
+.PHONY : ant_moves.c.s
+
+bfs.o: bfs.c.o
+
+.PHONY : bfs.o
+
+# target to build an object file
+bfs.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/bfs.c.o
+.PHONY : bfs.c.o
+
+bfs.i: bfs.c.i
+
+.PHONY : bfs.i
+
+# target to preprocess a source file
+bfs.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/bfs.c.i
+.PHONY : bfs.c.i
+
+bfs.s: bfs.c.s
+
+.PHONY : bfs.s
+
+# target to generate assembly for a file
+bfs.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/bfs.c.s
+.PHONY : bfs.c.s
+
+bresenhem.o: bresenhem.c.o
+
+.PHONY : bresenhem.o
+
+# target to build an object file
+bresenhem.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/bresenhem.c.o
+.PHONY : bresenhem.c.o
+
+bresenhem.i: bresenhem.c.i
+
+.PHONY : bresenhem.i
+
+# target to preprocess a source file
+bresenhem.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/bresenhem.c.i
+.PHONY : bresenhem.c.i
+
+bresenhem.s: bresenhem.c.s
+
+.PHONY : bresenhem.s
+
+# target to generate assembly for a file
+bresenhem.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/bresenhem.c.s
+.PHONY : bresenhem.c.s
+
+control.o: control.c.o
+
+.PHONY : control.o
+
+# target to build an object file
+control.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/control.c.o
+.PHONY : control.c.o
+
+control.i: control.c.i
+
+.PHONY : control.i
+
+# target to preprocess a source file
+control.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/control.c.i
+.PHONY : control.c.i
+
+control.s: control.c.s
+
+.PHONY : control.s
+
+# target to generate assembly for a file
+control.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/control.c.s
+.PHONY : control.c.s
+
+creat_image.o: creat_image.c.o
+
+.PHONY : creat_image.o
+
+# target to build an object file
+creat_image.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/creat_image.c.o
+.PHONY : creat_image.c.o
+
+creat_image.i: creat_image.c.i
+
+.PHONY : creat_image.i
+
+# target to preprocess a source file
+creat_image.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/creat_image.c.i
+.PHONY : creat_image.c.i
+
+creat_image.s: creat_image.c.s
+
+.PHONY : creat_image.s
+
+# target to generate assembly for a file
+creat_image.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/creat_image.c.s
+.PHONY : creat_image.c.s
+
+find_way.o: find_way.c.o
+
+.PHONY : find_way.o
+
+# target to build an object file
+find_way.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/find_way.c.o
+.PHONY : find_way.c.o
+
+find_way.i: find_way.c.i
+
+.PHONY : find_way.i
+
+# target to preprocess a source file
+find_way.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/find_way.c.i
+.PHONY : find_way.c.i
+
+find_way.s: find_way.c.s
+
+.PHONY : find_way.s
+
+# target to generate assembly for a file
+find_way.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/find_way.c.s
+.PHONY : find_way.c.s
+
+free_all.o: free_all.c.o
+
+.PHONY : free_all.o
+
+# target to build an object file
+free_all.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/free_all.c.o
+.PHONY : free_all.c.o
+
+free_all.i: free_all.c.i
+
+.PHONY : free_all.i
+
+# target to preprocess a source file
+free_all.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/free_all.c.i
+.PHONY : free_all.c.i
+
+free_all.s: free_all.c.s
+
+.PHONY : free_all.s
+
+# target to generate assembly for a file
+free_all.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/free_all.c.s
+.PHONY : free_all.c.s
 
 ft_printf/bonus_wildcard.o: ft_printf/bonus_wildcard.c.o
 
@@ -2256,6 +2418,33 @@ lib_room.c.s:
 	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/lib_room.c.s
 .PHONY : lib_room.c.s
 
+loop_key_hook.o: loop_key_hook.c.o
+
+.PHONY : loop_key_hook.o
+
+# target to build an object file
+loop_key_hook.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/loop_key_hook.c.o
+.PHONY : loop_key_hook.c.o
+
+loop_key_hook.i: loop_key_hook.c.i
+
+.PHONY : loop_key_hook.i
+
+# target to preprocess a source file
+loop_key_hook.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/loop_key_hook.c.i
+.PHONY : loop_key_hook.c.i
+
+loop_key_hook.s: loop_key_hook.c.s
+
+.PHONY : loop_key_hook.s
+
+# target to generate assembly for a file
+loop_key_hook.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/loop_key_hook.c.s
+.PHONY : loop_key_hook.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -2282,6 +2471,195 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/main.c.s
 .PHONY : main.c.s
+
+mouse_press.o: mouse_press.c.o
+
+.PHONY : mouse_press.o
+
+# target to build an object file
+mouse_press.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/mouse_press.c.o
+.PHONY : mouse_press.c.o
+
+mouse_press.i: mouse_press.c.i
+
+.PHONY : mouse_press.i
+
+# target to preprocess a source file
+mouse_press.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/mouse_press.c.i
+.PHONY : mouse_press.c.i
+
+mouse_press.s: mouse_press.c.s
+
+.PHONY : mouse_press.s
+
+# target to generate assembly for a file
+mouse_press.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/mouse_press.c.s
+.PHONY : mouse_press.c.s
+
+parse.o: parse.c.o
+
+.PHONY : parse.o
+
+# target to build an object file
+parse.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/parse.c.o
+.PHONY : parse.c.o
+
+parse.i: parse.c.i
+
+.PHONY : parse.i
+
+# target to preprocess a source file
+parse.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/parse.c.i
+.PHONY : parse.c.i
+
+parse.s: parse.c.s
+
+.PHONY : parse.s
+
+# target to generate assembly for a file
+parse.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/parse.c.s
+.PHONY : parse.c.s
+
+parse_link.o: parse_link.c.o
+
+.PHONY : parse_link.o
+
+# target to build an object file
+parse_link.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/parse_link.c.o
+.PHONY : parse_link.c.o
+
+parse_link.i: parse_link.c.i
+
+.PHONY : parse_link.i
+
+# target to preprocess a source file
+parse_link.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/parse_link.c.i
+.PHONY : parse_link.c.i
+
+parse_link.s: parse_link.c.s
+
+.PHONY : parse_link.s
+
+# target to generate assembly for a file
+parse_link.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/parse_link.c.s
+.PHONY : parse_link.c.s
+
+parse_rooms.o: parse_rooms.c.o
+
+.PHONY : parse_rooms.o
+
+# target to build an object file
+parse_rooms.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/parse_rooms.c.o
+.PHONY : parse_rooms.c.o
+
+parse_rooms.i: parse_rooms.c.i
+
+.PHONY : parse_rooms.i
+
+# target to preprocess a source file
+parse_rooms.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/parse_rooms.c.i
+.PHONY : parse_rooms.c.i
+
+parse_rooms.s: parse_rooms.c.s
+
+.PHONY : parse_rooms.s
+
+# target to generate assembly for a file
+parse_rooms.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/parse_rooms.c.s
+.PHONY : parse_rooms.c.s
+
+print_result.o: print_result.c.o
+
+.PHONY : print_result.o
+
+# target to build an object file
+print_result.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/print_result.c.o
+.PHONY : print_result.c.o
+
+print_result.i: print_result.c.i
+
+.PHONY : print_result.i
+
+# target to preprocess a source file
+print_result.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/print_result.c.i
+.PHONY : print_result.c.i
+
+print_result.s: print_result.c.s
+
+.PHONY : print_result.s
+
+# target to generate assembly for a file
+print_result.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/print_result.c.s
+.PHONY : print_result.c.s
+
+render.o: render.c.o
+
+.PHONY : render.o
+
+# target to build an object file
+render.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/render.c.o
+.PHONY : render.c.o
+
+render.i: render.c.i
+
+.PHONY : render.i
+
+# target to preprocess a source file
+render.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/render.c.i
+.PHONY : render.c.i
+
+render.s: render.c.s
+
+.PHONY : render.s
+
+# target to generate assembly for a file
+render.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/render.c.s
+.PHONY : render.c.s
+
+transform.o: transform.c.o
+
+.PHONY : transform.o
+
+# target to build an object file
+transform.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/transform.c.o
+.PHONY : transform.c.o
+
+transform.i: transform.c.i
+
+.PHONY : transform.i
+
+# target to preprocess a source file
+transform.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/transform.c.i
+.PHONY : transform.c.i
+
+transform.s: transform.c.s
+
+.PHONY : transform.s
+
+# target to generate assembly for a file
+transform.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/transform.c.s
+.PHONY : transform.c.s
 
 utils.o: utils.c.o
 
@@ -2310,6 +2688,87 @@ utils.c.s:
 	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/utils.c.s
 .PHONY : utils.c.s
 
+valid_links.o: valid_links.c.o
+
+.PHONY : valid_links.o
+
+# target to build an object file
+valid_links.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/valid_links.c.o
+.PHONY : valid_links.c.o
+
+valid_links.i: valid_links.c.i
+
+.PHONY : valid_links.i
+
+# target to preprocess a source file
+valid_links.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/valid_links.c.i
+.PHONY : valid_links.c.i
+
+valid_links.s: valid_links.c.s
+
+.PHONY : valid_links.s
+
+# target to generate assembly for a file
+valid_links.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/valid_links.c.s
+.PHONY : valid_links.c.s
+
+valid_rooms.o: valid_rooms.c.o
+
+.PHONY : valid_rooms.o
+
+# target to build an object file
+valid_rooms.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/valid_rooms.c.o
+.PHONY : valid_rooms.c.o
+
+valid_rooms.i: valid_rooms.c.i
+
+.PHONY : valid_rooms.i
+
+# target to preprocess a source file
+valid_rooms.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/valid_rooms.c.i
+.PHONY : valid_rooms.c.i
+
+valid_rooms.s: valid_rooms.c.s
+
+.PHONY : valid_rooms.s
+
+# target to generate assembly for a file
+valid_rooms.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/valid_rooms.c.s
+.PHONY : valid_rooms.c.s
+
+valid_rooms2.o: valid_rooms2.c.o
+
+.PHONY : valid_rooms2.o
+
+# target to build an object file
+valid_rooms2.c.o:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/valid_rooms2.c.o
+.PHONY : valid_rooms2.c.o
+
+valid_rooms2.i: valid_rooms2.c.i
+
+.PHONY : valid_rooms2.i
+
+# target to preprocess a source file
+valid_rooms2.c.i:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/valid_rooms2.c.i
+.PHONY : valid_rooms2.c.i
+
+valid_rooms2.s: valid_rooms2.c.s
+
+.PHONY : valid_rooms2.s
+
+# target to generate assembly for a file
+valid_rooms2.c.s:
+	$(MAKE) -f CMakeFiles/lem_visual.dir/build.make CMakeFiles/lem_visual.dir/valid_rooms2.c.s
+.PHONY : valid_rooms2.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2319,9 +2778,27 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... lem_visual"
-	@echo "... double_split.o"
-	@echo "... double_split.i"
-	@echo "... double_split.s"
+	@echo "... ant_moves.o"
+	@echo "... ant_moves.i"
+	@echo "... ant_moves.s"
+	@echo "... bfs.o"
+	@echo "... bfs.i"
+	@echo "... bfs.s"
+	@echo "... bresenhem.o"
+	@echo "... bresenhem.i"
+	@echo "... bresenhem.s"
+	@echo "... control.o"
+	@echo "... control.i"
+	@echo "... control.s"
+	@echo "... creat_image.o"
+	@echo "... creat_image.i"
+	@echo "... creat_image.s"
+	@echo "... find_way.o"
+	@echo "... find_way.i"
+	@echo "... find_way.s"
+	@echo "... free_all.o"
+	@echo "... free_all.i"
+	@echo "... free_all.s"
 	@echo "... ft_printf/bonus_wildcard.o"
 	@echo "... ft_printf/bonus_wildcard.i"
 	@echo "... ft_printf/bonus_wildcard.s"
@@ -2556,12 +3033,45 @@ help:
 	@echo "... lib_room.o"
 	@echo "... lib_room.i"
 	@echo "... lib_room.s"
+	@echo "... loop_key_hook.o"
+	@echo "... loop_key_hook.i"
+	@echo "... loop_key_hook.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mouse_press.o"
+	@echo "... mouse_press.i"
+	@echo "... mouse_press.s"
+	@echo "... parse.o"
+	@echo "... parse.i"
+	@echo "... parse.s"
+	@echo "... parse_link.o"
+	@echo "... parse_link.i"
+	@echo "... parse_link.s"
+	@echo "... parse_rooms.o"
+	@echo "... parse_rooms.i"
+	@echo "... parse_rooms.s"
+	@echo "... print_result.o"
+	@echo "... print_result.i"
+	@echo "... print_result.s"
+	@echo "... render.o"
+	@echo "... render.i"
+	@echo "... render.s"
+	@echo "... transform.o"
+	@echo "... transform.i"
+	@echo "... transform.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"
+	@echo "... valid_links.o"
+	@echo "... valid_links.i"
+	@echo "... valid_links.s"
+	@echo "... valid_rooms.o"
+	@echo "... valid_rooms.i"
+	@echo "... valid_rooms.s"
+	@echo "... valid_rooms2.o"
+	@echo "... valid_rooms2.i"
+	@echo "... valid_rooms2.s"
 .PHONY : help
 
 
