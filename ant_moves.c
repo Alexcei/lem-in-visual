@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 00:38:22 by bpole             #+#    #+#             */
-/*   Updated: 2019/12/19 18:18:52 by bpole            ###   ########.fr       */
+/*   Updated: 2019/12/19 20:49:40 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ void			ft_ant_moves(t_data *data)
 	while (data->lem->end->number_ant < data->lem->ants)
 	{
 		data->lem->space = 1;
+		if (check_start_end(data->lem))
+			ft_ant_moves_from_start_to_end(data->lem);
 		ft_ant_moves_in_rooms(data->lem);
 		ant_moves(data->lem);
 		ft_printf("\n");
@@ -73,7 +75,7 @@ void			ft_ant_moves(t_data *data)
 int				lem_loop_key_hook(t_data *data)
 {
 	char		*str;
-	static int	i;
+	static int 		i;
 
 	if (i > data->speed)
 		i = 0;
@@ -82,6 +84,8 @@ int				lem_loop_key_hook(t_data *data)
 	if (!i && data->pause == 1 && data->lem->end->number_ant < data->lem->ants)
 	{
 		data->lem->space = 1;
+		if (check_start_end(data->lem))
+			ft_ant_moves_from_start_to_end(data->lem);
 		ft_ant_moves_in_rooms(data->lem);
 		ant_moves(data->lem);
 		ft_printf("\n");
@@ -91,7 +95,7 @@ int				lem_loop_key_hook(t_data *data)
 	{
 		str = "PAUSE";
 		mlx_string_put(data->mlx, data->win,
-				(WIDTH / 5) - 10, (HEIGHT / 2) - 10, 0x0FFFFFF, str);
+					   (WIDTH / 5) - 10, (HEIGHT / 2) - 10, 0x0FFFFFF, str);
 	}
 	return (0);
 }

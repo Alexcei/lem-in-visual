@@ -6,13 +6,13 @@
 /*   By: wtorwold <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 14:50:34 by wtorwold          #+#    #+#             */
-/*   Updated: 2019/12/19 18:28:37 by bpole            ###   ########.fr       */
+/*   Updated: 2019/12/19 20:41:37 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-static int		lem_init(t_data *data, t_mouse *mouse, t_camera *camera)
+static int		lem_init(t_data *data, t_mouse  *mouse, t_camera *camera)
 {
 	ft_bzero(camera, sizeof(t_camera));
 	ft_bzero(mouse, sizeof(t_mouse));
@@ -53,7 +53,7 @@ void			lem_in(t_data *data, t_lem *lem)
 	ft_parse_file(data);
 	ft_bfs(data->lem);
 	find_way(data->lem);
-	if (!data->lem->way)
+	if (!data->lem->way && !check_start_end(lem))
 		ft_error("ERROR: no solve");
 	ft_print_save(lem);
 	make_clone(data->lem);
@@ -64,18 +64,28 @@ void			parse_flag(t_data *data, t_lem *lem, int ac, char **av)
 	ft_bzero(data, sizeof(t_data));
 	ft_bzero(lem, sizeof(t_lem));
 	data->lem = lem;
-	if (ac == 2 && (ft_strcmp(av[1], "-v") == 0))
+
+	if (av[2] != NULL && (ft_strcmp(av[2], "-v") == 0))
 		data->lem->v = 1;
-	if (ac != 1 && data->lem->v == 0)
+	if (ac != 2 && data->lem->v == 0)
 		ft_error("ERROR: Usage : ./lem-in < <filename>");
-	else if (ac != 2 && data->lem->v == 1)
+	else if (ac != 3 && data->lem->v == 1)
 		ft_error("ERROR: Usage : ./lem-in < <filename> [-v]");
+	if ((data->lem->fd = open(av[1], O_RDONLY)) < 0)
+		ft_error("Open error");
+
+//	if (ac == 2 && (ft_strcmp(av[1], "-v") == 0))
+//		data->lem->v = 1;
+//	if (ac != 1 && data->lem->v == 0)
+//		ft_error("ERROR: Usage : ./lem-in < <filename>");
+//	else if (ac != 2 && data->lem->v == 1)
+//		ft_error("ERROR: Usage : ./lem-in < <filename> [-v]");
 }
 
 int				main(int ac, char **av)
 {
 	t_camera	camera;
-	t_mouse		mouse;
+	t_mouse 	mouse;
 	t_data		data;
 	t_lem		lem;
 

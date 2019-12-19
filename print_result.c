@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 00:35:11 by bpole             #+#    #+#             */
-/*   Updated: 2019/12/19 16:40:36 by bpole            ###   ########.fr       */
+/*   Updated: 2019/12/19 21:08:38 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,21 @@ static void		print_moves(t_lem *lem, t_connect *clone)
 				clone->rooms->name);
 		clone->rooms->number_ant = clone->next->rooms->number_ant;
 		clone->next->rooms->number_ant = 0;
+	}
+}
+
+void			ft_ant_moves_from_start_to_end(t_lem *lem)
+{
+	if (lem->start->number_ant)
+	{
+		if (lem->space)
+			lem->space = 0;
+		else
+			ft_printf(" ");
+		ft_printf("L%d-%s", lem->ants + 1 - lem->start->number_ant,
+				lem->end->name);
+		lem->end->number_ant++;
+		lem->start->number_ant--;
 	}
 }
 

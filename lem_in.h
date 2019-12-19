@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 00:51:59 by bpole             #+#    #+#             */
-/*   Updated: 2019/12/19 18:25:38 by bpole            ###   ########.fr       */
+/*   Updated: 2019/12/19 20:40:48 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,12 +152,12 @@ typedef struct			s_dot
 typedef struct			s_data
 {
 	t_camera			*camera;
-	t_mouse				*mouse;
-	t_lem				*lem;
-	int					speed;
+	t_mouse 			*mouse;
+	t_lem 				*lem;
+	int 				speed;
 	int					width;
 	int					height;
-	int					pause;
+	int 				pause;
 	int					z_min;
 	int					z_max;
 	void				*mlx;
@@ -220,8 +220,7 @@ int						ft_find_fork_out(t_rooms *room);
 **						mouse_move.c
 */
 int						lem_mouse_press(int button, int x, int y, void *param);
-int						lem_mouse_release(int button,
-						int x, int y, void *param);
+int						lem_mouse_release(int button, int x, int y, void *param);
 int						lem_mouse_move(int x, int y, void *param);
 
 /*
@@ -246,6 +245,7 @@ void					parse_rooms(t_lem *lem);
 */
 void					ft_print_save(t_lem *lem);
 void					ft_ant_moves_in_rooms(t_lem *lem);
+void					ft_ant_moves_from_start_to_end(t_lem *lem);
 
 /*
 ** 						render.c
@@ -272,6 +272,7 @@ int						lem_close(void *data);
 void					ft_error(char *str);
 void					ft_free_char_arr(char ***arr);
 void					ft_swap(void **a, void **b);
+int						check_start_end(t_lem *lem);
 
 /*
 ** 						valid_links.c
