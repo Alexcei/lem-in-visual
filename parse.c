@@ -6,7 +6,7 @@
 /*   By: wtorwold <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 16:04:04 by wtorwold          #+#    #+#             */
-/*   Updated: 2019/12/19 00:56:03 by bpole            ###   ########.fr       */
+/*   Updated: 2019/12/19 18:31:08 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,12 +57,22 @@ int				ft_hash(char *line)
 		return (0);
 }
 
-void			ft_parse_file(t_lem *lem)
+static void		count_size(t_data *data)
 {
-	if (!ft_read_file(lem))
+	data->width = data->lem->max_x - data->lem->min_x;
+	data->height = data->lem->max_y - data->lem->min_y;
+	data->camera->zoom = FT_MIN(WIDTH / data->width / 2,
+			HEIGHT / data->height / 2);
+}
+
+void			ft_parse_file(t_data *data)
+{
+	if (!ft_read_file(data->lem))
 		ft_error("ERROR: first line is empty");
-	parse_ants(lem);
-	parse_rooms(lem);
-	valid_rooms2(lem);
-	parse_links(lem);
+	parse_ants(data->lem);
+	parse_rooms(data->lem);
+	valid_rooms2(data->lem);
+	parse_links(data->lem);
+	if (data->lem->v)
+		count_size(data);
 }

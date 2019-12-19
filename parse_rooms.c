@@ -6,11 +6,27 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 00:56:56 by bpole             #+#    #+#             */
-/*   Updated: 2019/12/19 00:57:04 by bpole            ###   ########.fr       */
+/*   Updated: 2019/12/19 12:33:02 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
+
+static void		init_size(t_lem *lem, t_rooms *new, char **str)
+{
+	new->x = ft_atoi(str[1]);
+	lem->max_x = (new->x > lem->max_x ? new->x : lem->max_x);
+	lem->min_x = (new->x < lem->min_x ? new->x : lem->min_x);
+	new->y = ft_atoi(str[2]);
+	lem->max_y = (new->y > lem->max_y ? new->y : lem->max_y);
+	lem->min_y = (new->y < lem->min_y ? new->y : lem->min_y);
+	if (lem->v == 1)
+	{
+		new->z = ft_atoi(str[3]);
+		lem->max_z = (new->z > lem->max_z ? new->z : lem->max_z);
+		lem->min_z = (new->z < lem->min_z ? new->z : lem->min_z);
+	}
+}
 
 static t_rooms	*creat_room(t_lem *lem, char **str, int type)
 {
@@ -20,12 +36,8 @@ static t_rooms	*creat_room(t_lem *lem, char **str, int type)
 	if ((new = (t_rooms *)ft_memalloc(sizeof(t_rooms))) == NULL)
 		ft_error("ERROR: of malloc");
 	new->name = ft_strjoin("", str[0]);
-	new->x = ft_atoi(str[1]);
-	new->y = ft_atoi(str[2]);
-	if (lem->v == 1)
-		new->z = ft_atoi(str[3]);
+	init_size(lem, new, str);
 	new->type = type;
-	new->next = NULL;
 	if (type == 1)
 	{
 		lem->start = new;

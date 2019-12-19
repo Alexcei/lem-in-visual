@@ -12,6 +12,12 @@
 
 #include "lem_in.h"
 
+int			lem_close(void *data)
+{
+	(void)data;
+	exit(EXIT_SUCCESS);
+}
+
 void		ft_error(char *message)
 {
 	ft_putendl_fd(message, 2);

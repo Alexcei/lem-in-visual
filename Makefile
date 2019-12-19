@@ -16,9 +16,10 @@ LIB_DIR = ./ft_printf/
 
 LIBFT = $(LIB_DIR)libftprintf.a
 
-SRC = ant_moves.c bfs.c find_way.c free_all.c lib_connect.c lib_room.c main.c \
-      parse.c parse_link.c parse_rooms.c print_result.c utils.c valid_links.c \
-      valid_rooms.c valid_rooms2.c
+SRC = ant_moves.c bfs.c bresenhem.c control.c find_way.c free_all.c \
+      lib_connect.c lib_room.c main.c mouse_press.c parse.c parse_link.c \
+      parse_rooms.c print_result.c render.c render_menu.c transform.c utils.c \
+      valid_links.c valid_rooms.c valid_rooms2.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 00:38:22 by bpole             #+#    #+#             */
-/*   Updated: 2019/12/19 00:53:10 by bpole            ###   ########.fr       */
+/*   Updated: 2019/12/19 18:18:52 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,37 +59,39 @@ static void		ant_moves(t_lem *lem)
 	}
 }
 
-static void		make_clone(t_lem *lem)
+void			ft_ant_moves(t_data *data)
 {
-	t_way		*way;
-	t_connect	*connect;
-
-	way = lem->way;
-	while (way)
+	while (data->lem->end->number_ant < data->lem->ants)
 	{
-		connect = way->connect;
-		while (connect)
-		{
-			ft_connect_add(&way->clone, ft_connect_new(connect->rooms));
-			connect = connect->next;
-		}
-		way = way->next;
+		data->lem->space = 1;
+		ft_ant_moves_in_rooms(data->lem);
+		ant_moves(data->lem);
+		ft_printf("\n");
 	}
 }
 
-void			ft_ant_moves(t_lem *lem)
+int				lem_loop_key_hook(t_data *data)
 {
-	int			step;
+	char		*str;
+	static int	i;
 
-	step = 0;
-	lem->start->number_ant = lem->ants;
-	make_clone(lem);
-	while (lem->end->number_ant < lem->ants)
+	if (i > data->speed)
+		i = 0;
+	else
+		i++;
+	if (!i && data->pause == 1 && data->lem->end->number_ant < data->lem->ants)
 	{
-		step++;
-		lem->space = 1;
-		ft_ant_moves_in_rooms(lem);
-		ant_moves(lem);
+		data->lem->space = 1;
+		ft_ant_moves_in_rooms(data->lem);
+		ant_moves(data->lem);
 		ft_printf("\n");
 	}
+	lem_render(data);
+	if (data->pause == 0)
+	{
+		str = "PAUSE";
+		mlx_string_put(data->mlx, data->win,
+				(WIDTH / 5) - 10, (HEIGHT / 2) - 10, 0x0FFFFFF, str);
+	}
+	return (0);
 }

@@ -1,3 +1,0 @@
-/Users/bpole/CLionProjects/lem_visual/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/bpole/CLionProjects/lem_visual/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/bpole/CLionProjects/lem_visual/cmake-build-debug/CMakeFiles/lem_visual.dir

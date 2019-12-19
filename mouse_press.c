@@ -1,14 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   mouse_press.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/19 18:29:08 by bpole             #+#    #+#             */
+/*   Updated: 2019/12/19 18:29:52 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
 
 static void		zoom(int key, t_data *data)
 {
 	if (key == NUM_PAD_PLUS ||
-		key == MAIN_PAD_PLUS ||
-		key == MOUSE_SCROLL_UP)
+			key == MAIN_PAD_PLUS ||
+			key == MOUSE_SCROLL_UP)
 		data->camera->zoom++;
 	else if (key == NUM_PAD_MINUS ||
-			 key == MAIN_PAD_MINUS ||
-			 key == MOUSE_SCROLL_DOWN)
+			key == MAIN_PAD_MINUS ||
+			key == MOUSE_SCROLL_DOWN)
 		data->camera->zoom--;
 	if (data->camera->zoom < 1)
 		data->camera->zoom = 1;
@@ -18,9 +30,8 @@ static void		view_up(t_data *data)
 {
 	data->camera->x_offset = WIDTH / 2;
 	data->camera->y_offset = HEIGHT / 2;
-	data->camera->polygon = 1;
-	data->camera->zoom = FT_MIN(WIDTH / data->width / 2, HEIGHT / data->height / 2);
-	rotate(data->dot, 0, 0);
+	data->camera->zoom = FT_MIN(WIDTH / data->width / 2,
+			HEIGHT / data->height / 2);
 	data->camera->alpha = 0;
 	data->camera->beta = 0;
 }

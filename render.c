@@ -1,71 +1,112 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   render.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/19 18:31:13 by bpole             #+#    #+#             */
+/*   Updated: 2019/12/19 18:32:12 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
 
-static void		render_background(t_data *data)
+static void		render_connect(t_data *data)
 {
-	int 		i;
+	t_connect	*connect;
+	t_rooms		*rooms;
+	t_dot		dots[2];
 
-	i = 0;
-	ft_bzero(data->data_addr, sizeof(char) * SIZE);
-	while (i < SIZE)
-		((int*)(data->data_addr))[i++] = BACKGROUND;
-}
-
-static void		init_dot_c_d(int i, t_dot *dot_c, t_dot *dot_d, t_data *data)
-{
-	if (i + data->width < data->size)
-		*dot_c = transformations(data->dot[i + data->width], data);
-	if (i + data->width + 1 < data->size)
-		*dot_d = transformations(data->dot[i + data->width + 1], data);
-}
-
-static void		render_map(t_data *data)
-{
-	t_dot		dots[4];
-	int 		i;
-
-	i = -1;
-	while (++i < data->size)
+	rooms = data->lem->rooms;
+	while (rooms)
 	{
-		dots[0] = transformations(data->dot[i], data);
-		if (i + 1 < data->size)
-			dots[1] = transformations(data->dot[i + 1], data);
-		init_dot_c_d(i, &dots[2], &dots[3], data);
-		if ((i + 1) % data->width != 0)
+		connect = rooms->connect;
+		while (connect)
 		{
-			if (dots[0].color && data->camera->polygon &&
-				i / data->width != data->height - 1)
-			{
-				data->color_tmp = dots[0].color;
-				render_plane(dots[0], dots[1], dots[2], data);
-				render_plane(dots[1], dots[2], dots[3], data);
-			}
-			render_line(dots[0], dots[1], data);
+			get_dot(data, &dots[0], rooms);
+			get_dot(data, &dots[1], connect->rooms);
+			render_line(dots[0], dots[1], data, GRAF);
+			connect = connect->next;
 		}
-		if (i / data->width != data->height - 1)
-			render_line(dots[0], dots[2], data);
+		rooms = rooms->next;
 	}
 }
 
-static void		render_menu(t_data *data)
+static void		render_way(t_data *data)
 {
-	mlx_string_put(data->mlx, data->win, 85, 20,
-				   TEXT_COLOR, "MENU");
-	mlx_string_put(data->mlx, data->win, 65, 40,
-				   TEXT_COLOR, "Zoom - Scroll mouse");
-	mlx_string_put(data->mlx, data->win, 65, 60,
-				   TEXT_COLOR, "Rotate - Press left mouse and move");
-	mlx_string_put(data->mlx, data->win, 65, 80,
-				   TEXT_COLOR, "Move - Press right mouse and move");
-	mlx_string_put(data->mlx, data->win, 65, 100,
-				   TEXT_COLOR, "Reset view - Press wheel mouse");
-	mlx_string_put(data->mlx, data->win, 65, 120,
-				   TEXT_COLOR, "Pause - \"P\"");
+	t_way		*way;
+	t_connect	*connect;
+	t_dot		dots[2];
+
+	way = data->lem->way;
+	while (way)
+	{
+		connect = way->connect;
+		get_dot(data, &dots[0], data->lem->start);
+		get_dot(data, &dots[1], connect->rooms);
+		render_line(dots[0], dots[1], data, WAY);
+		while (connect)
+		{
+			get_dot(data, &dots[0], connect->rooms);
+			if (connect->next)
+				get_dot(data, &dots[1], connect->next->rooms);
+			else
+				get_dot(data, &dots[1], data->lem->end);
+			render_line(dots[0], dots[1], data, WAY);
+			connect = connect->next;
+		}
+		way = way->next;
+	}
 }
 
-void			fdf_render(t_data *data)
+static void		render_ant(t_data *data)
+{
+	t_dot		dot;
+	t_way		*way;
+	t_connect	*connect;
+	char		*str;
+
+	way = data->lem->way;
+	while (way)
+	{
+		connect = way->connect;
+		while (connect)
+		{
+			str = ft_itoa(connect->rooms->number_ant);
+			get_dot(data, &dot, connect->rooms);
+			if (connect->rooms->number_ant)
+				mlx_string_put(data->mlx, data->win, (int)dot.x,
+						(int)dot.y, ANT, str);
+			ft_strdel(&str);
+			connect = connect->next;
+		}
+		way = way->next;
+	}
+}
+
+static void		render_ant_on_start_end(t_data *data)
+{
+	t_dot		dot;
+	char		*str;
+
+	str = ft_itoa(data->lem->start->number_ant);
+	get_dot(data, &dot, data->lem->start);
+	mlx_string_put(data->mlx, data->win, (int)dot.x, (int)dot.y, ANT_S, str);
+	ft_strdel(&str);
+	str = ft_itoa(data->lem->end->number_ant);
+	get_dot(data, &dot, data->lem->end);
+	mlx_string_put(data->mlx, data->win, (int)dot.x, (int)dot.y, ANT_S, str);
+	ft_strdel(&str);
+}
+
+void			lem_render(t_data *data)
 {
 	render_background(data);
-	render_map(data);
+	render_connect(data);
+	render_way(data);
 	mlx_put_image_to_window(data->mlx, data->win, data->img, 0, 0);
+	render_ant(data);
+	render_ant_on_start_end(data);
 	render_menu(data);
 }

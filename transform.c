@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   transform.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/19 18:33:17 by bpole             #+#    #+#             */
+/*   Updated: 2019/12/19 18:34:10 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
 
-void		rotate(t_dot *dot, double alpha, double beta)
+void			rotate(t_dot *dot, double alpha, double beta)
 {
 	double		x;
 	double		y;

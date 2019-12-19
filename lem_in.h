@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 00:51:59 by bpole             #+#    #+#             */
-/*   Updated: 2019/12/19 02:57:27 by bpole            ###   ########.fr       */
+/*   Updated: 2019/12/19 18:25:38 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <fcntl.h>
 # include <limits.h>
 # include <math.h>
+# include <time.h>
 
 # define HEIGHT				1080
 # define WIDTH				1920
@@ -25,9 +26,10 @@
 
 # define TEXT_COLOR			0xEAEAEA
 # define BACKGROUND			0x0
-# define PLAYER1		    0x5555FF
-# define PLAYER2		    0xFF5555
-# define FDF 		   		0x0
+# define ANT				0xEAEAEA
+# define ANT_S				0xFF0000
+# define GRAF 		   		0x666666
+# define WAY 		   		0xFFFFFF
 
 # define FT_MIN(a, b) (a < b ? a : b)
 # define MAX(a, b) (a > b ? a : b)
@@ -48,8 +50,6 @@
 # define NUM_PAD_MINUS		78
 
 # define MAIN_PAD_ESC		53
-# define MAIN_PAD_G			5
-# define MAIN_PAD_H			4
 # define MAIN_PAD_P			35
 # define MAIN_PAD_PLUS		24
 # define MAIN_PAD_MINUS		27
@@ -101,6 +101,12 @@ struct					s_rooms
 
 typedef struct			s_lem
 {
+	int					min_x;
+	int					min_y;
+	int					min_z;
+	int					max_x;
+	int					max_y;
+	int					max_z;
 	char				**str;
 	t_save				*save;
 	int					space;
@@ -117,59 +123,57 @@ typedef struct			s_lem
 	int					v;
 }						t_lem;
 
-typedef struct		s_mouse
+typedef struct			s_mouse
 {
-	char			put_left;
-	char			put_right;
-	int				x;
-	int				y;
-	int				previous_x;
-	int				previous_y;
-}					t_mouse;
+	char				put_left;
+	char				put_right;
+	int					x;
+	int					y;
+	int					previous_x;
+	int					previous_y;
+}						t_mouse;
 
-typedef struct		s_camera
+typedef struct			s_camera
 {
-	int				zoom;
-	double			alpha;
-	double			beta;
-	double			x_offset;
-	double			y_offset;
-	int 			polygon;
-}					t_camera;
+	int					zoom;
+	double				alpha;
+	double				beta;
+	double				x_offset;
+	double				y_offset;
+}						t_camera;
 
-typedef struct		s_dot
+typedef struct			s_dot
 {
-	double			x;
-	double			y;
-	double			z;
-	int 			color;
-}					t_dot;
+	double				x;
+	double				y;
+	double				z;
+}						t_dot;
 
-typedef struct		s_data
+typedef struct			s_data
 {
-	t_camera		*camera;
-	t_mouse 		*mouse;
-	t_dot			*dot;
-	int 			color_tmp;
-	int				width;
-	int				height;
-	int 			size;
-	int 			pause;
-	int				z_min;
-	int				z_max;
-	void			*mlx;
-	void			*win;
-	void			*img;
-	char			*data_addr;
-	int				bits_per_pixel;
-	int				size_line;
-	int				endian;
-}					t_data;
+	t_camera			*camera;
+	t_mouse				*mouse;
+	t_lem				*lem;
+	int					speed;
+	int					width;
+	int					height;
+	int					pause;
+	int					z_min;
+	int					z_max;
+	void				*mlx;
+	void				*win;
+	void				*img;
+	char				*data_addr;
+	int					bits_per_pixel;
+	int					size_line;
+	int					endian;
+}						t_data;
 
 /*
 ** 						ant_moves.c
 */
-void					ft_ant_moves(t_lem *lem);
+int						lem_loop_key_hook(t_data *data);
+void					ft_ant_moves(t_data *data);
 
 /*
 **						bfs.c
@@ -179,18 +183,12 @@ void					ft_bfs(t_lem *lem);
 /*
 **						bresenhem.c
 */
-void					render_line(t_dot a, t_dot b, t_data *data);
-void					render_plane(t_dot a, t_dot b, t_dot c, t_data *data);
+void					render_line(t_dot a, t_dot b, t_data *data, int color);
 
 /*
 **						control.c
 */
 int						lem_hook_keydown(int key, t_data *data);
-
-/*
-**						control.c
-*/
-void					ft_creat_image(t_data *data);
 
 /*
 **						find_way.c
@@ -219,15 +217,11 @@ void					ft_save_push_back(t_save **begin_list, t_save *new);
 int						ft_find_fork_out(t_rooms *room);
 
 /*
-**						loop_key_hook.c
-*/
-int						lem_loop_key_hook(t_data *data);
-
-/*
 **						mouse_move.c
 */
 int						lem_mouse_press(int button, int x, int y, void *param);
-int						lem_mouse_release(int button, int x, int y, void *param);
+int						lem_mouse_release(int button,
+						int x, int y, void *param);
 int						lem_mouse_move(int x, int y, void *param);
 
 /*
@@ -235,7 +229,7 @@ int						lem_mouse_move(int x, int y, void *param);
 */
 int						ft_read_file(t_lem *lem);
 int						ft_hash(char *line);
-void					ft_parse_file(t_lem *lem);
+void					ft_parse_file(t_data *data);
 
 /*
 **						parse_link.c
@@ -256,7 +250,14 @@ void					ft_ant_moves_in_rooms(t_lem *lem);
 /*
 ** 						render.c
 */
-void					fdf_render(t_data *data);
+void					lem_render(t_data *data);
+
+/*
+** 						render_menu.c
+*/
+void					render_background(t_data *data);
+void					render_menu(t_data *data);
+void					get_dot(t_data *data, t_dot *dot, t_rooms *rooms);
 
 /*
 ** 						transform.c
@@ -267,6 +268,7 @@ t_dot					transformations(t_dot dot, t_data *data);
 /*
 ** 						utils.c
 */
+int						lem_close(void *data);
 void					ft_error(char *str);
 void					ft_free_char_arr(char ***arr);
 void					ft_swap(void **a, void **b);
