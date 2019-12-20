@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 00:58:21 by bpole             #+#    #+#             */
-/*   Updated: 2019/12/19 00:58:28 by bpole            ###   ########.fr       */
+/*   Updated: 2019/12/20 17:14:41 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,13 +73,16 @@ void			add_links(t_lem *lem)
 	cpy = lem->links;
 	if ((str = valid_links(lem)) == NULL)
 		ft_error("Error in links");
-	if (lem->links == NULL)
-		lem->links = creat_links(str);
-	else
+	if (!lem->v)
 	{
-		while (cpy->next != NULL)
-			cpy = cpy->next;
-		cpy->next = creat_links(str);
+		if (lem->links == NULL)
+			lem->links = creat_links(str);
+		else
+		{
+			while (cpy->next != NULL)
+				cpy = cpy->next;
+			cpy->next = creat_links(str);
+		}
 	}
 	ft_free_char_arr(&str);
 }

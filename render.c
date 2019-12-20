@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   render.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/19 18:31:13 by bpole             #+#    #+#             */
+/*   Updated: 2019/12/19 18:32:12 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
 
 static void		render_connect(t_data *data)
 {
-	t_connect *connect;
-	t_rooms *rooms;
-	t_dot dots[2];
+	t_connect	*connect;
+	t_rooms		*rooms;
+	t_dot		dots[2];
 
 	rooms = data->lem->rooms;
 	while (rooms)
@@ -25,7 +37,7 @@ static void		render_way(t_data *data)
 {
 	t_way		*way;
 	t_connect	*connect;
-	t_dot 		dots[2];
+	t_dot		dots[2];
 
 	way = data->lem->way;
 	while (way)
@@ -59,14 +71,13 @@ static void		render_ant(t_data *data)
 	while (way)
 	{
 		connect = way->connect;
-
 		while (connect)
 		{
 			str = ft_itoa(connect->rooms->number_ant);
 			get_dot(data, &dot, connect->rooms);
 			if (connect->rooms->number_ant)
 				mlx_string_put(data->mlx, data->win, (int)dot.x,
-						   (int)dot.y, ANT, str);
+							   (int)dot.y, ANT, str);
 			ft_strdel(&str);
 			connect = connect->next;
 		}

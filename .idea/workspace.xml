@@ -12,53 +12,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7fcf4cd-7358-4d1d-9e12-aa735eda51a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/render_menu.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant_moves.c" beforeDir="false" afterPath="$PROJECT_DIR$/ant_moves.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bresenhem.c" beforeDir="false" afterPath="$PROJECT_DIR$/bresenhem.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/ant_moves.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/ant_moves.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/bfs.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/bfs.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/find_way.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/find_way.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/free_all.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/free_all.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/parse.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/parse.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/parse_link.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/parse_link.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/parse_rooms.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/parse_rooms.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/print_result.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/print_result.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/valid_links.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/valid_links.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/valid_rooms.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/valid_rooms.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/valid_rooms2.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_visual.dir/valid_rooms2.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/lem_visual" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lem_visual" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lem_visual.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lem_visual.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/control.c" beforeDir="false" afterPath="$PROJECT_DIR$/control.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creat_image.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/find_way.c" beforeDir="false" afterPath="$PROJECT_DIR$/find_way.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_printf" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_printf/libft/libft.h" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf/libft/libft.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lem_in.h" beforeDir="false" afterPath="$PROJECT_DIR$/lem_in.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loop_key_hook.c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/pylone.fdf" beforeDir="false" afterPath="$PROJECT_DIR$/maps/pylone.fdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/pyramide.fdf" beforeDir="false" afterPath="$PROJECT_DIR$/maps/pyramide.fdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mouse_press.c" beforeDir="false" afterPath="$PROJECT_DIR$/mouse_press.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_map" beforeDir="false" afterPath="$PROJECT_DIR$/new_map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parse.c" beforeDir="false" afterPath="$PROJECT_DIR$/parse.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parse_rooms.c" beforeDir="false" afterPath="$PROJECT_DIR$/parse_rooms.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/print_result.c" beforeDir="false" afterPath="$PROJECT_DIR$/print_result.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parse_link.c" beforeDir="false" afterPath="$PROJECT_DIR$/parse_link.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/render.c" beforeDir="false" afterPath="$PROJECT_DIR$/render.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/render_menu.c" beforeDir="false" afterPath="$PROJECT_DIR$/render_menu.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test" beforeDir="false" afterPath="$PROJECT_DIR$/test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transform.c" beforeDir="false" afterPath="$PROJECT_DIR$/transform.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/utils.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/valid_rooms2.c" beforeDir="false" afterPath="$PROJECT_DIR$/valid_rooms2.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/valid_links.c" beforeDir="false" afterPath="$PROJECT_DIR$/valid_links.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/valid_rooms.c" beforeDir="false" afterPath="$PROJECT_DIR$/valid_rooms.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +59,7 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunManager">
-    <configuration name="lem_visual" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="test" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="lem_visual" TARGET_NAME="lem_visual" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="lem_visual" RUN_TARGET_NAME="lem_visual">
+    <configuration name="lem_visual" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="term_map_100_30_30_70_70_3_z -v" WORKING_DIR="file://$PROJECT_DIR$/maps" PASS_PARENT_ENVS_2="true" PROJECT_NAME="lem_visual" TARGET_NAME="lem_visual" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="lem_visual" RUN_TARGET_NAME="lem_visual">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -131,6 +104,10 @@
       <workItem from="1576711077474" duration="2827000" />
       <workItem from="1576743175789" duration="25691000" />
       <workItem from="1576776585882" duration="5426000" />
+      <workItem from="1576791381692" duration="270000" />
+      <workItem from="1576836528042" duration="620000" />
+      <workItem from="1576838890054" duration="3794000" />
+      <workItem from="1576850357643" duration="4143000" />
     </task>
     <servers />
   </component>
@@ -138,51 +115,51 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="790" y="518" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576777432009">
-      <screen x="0" y="23" width="2491" height="1417" />
+    <state x="789" y="518" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576854244630">
+      <screen x="0" y="23" width="2489" height="1417" />
     </state>
-    <state x="789" y="518" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2489.1417@0.23.2489.1417" timestamp="1576711455147" />
-    <state x="790" y="518" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2491.1417@0.23.2491.1417" timestamp="1576777432009" />
-    <state x="790" y="518" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2493.1417@0.23.2493.1417" timestamp="1576754715503" />
+    <state x="789" y="518" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2489.1417@0.23.2489.1417" timestamp="1576854244630" />
+    <state x="790" y="518" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2491.1417@0.23.2491.1417" timestamp="1576852742014" />
+    <state x="790" y="518" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2493.1417@0.23.2493.1417" timestamp="1576850020925" />
     <state x="791" y="518" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2495.1417@0.23.2495.1417" timestamp="1576767740861" />
     <state x="792" y="518" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2497.1417@0.23.2497.1417" timestamp="1576765303863" />
     <state x="1052" y="654" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576777463769">
       <screen x="0" y="23" width="2491" height="1417" />
     </state>
     <state x="1052" y="654" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2491.1417@0.23.2491.1417" timestamp="1576777463769" />
-    <state width="738" height="1071" key="GridCell.Tab.0.bottom" timestamp="1576791405315">
+    <state width="738" height="1071" key="GridCell.Tab.0.bottom" timestamp="1576854245786">
       <screen x="0" y="23" width="2489" height="1417" />
     </state>
-    <state width="738" height="1071" key="GridCell.Tab.0.bottom/0.23.2489.1417@0.23.2489.1417" timestamp="1576791405315" />
-    <state width="738" height="1071" key="GridCell.Tab.0.bottom/0.23.2491.1417@0.23.2491.1417" timestamp="1576791292691" />
-    <state width="738" height="1071" key="GridCell.Tab.0.bottom/0.23.2493.1417@0.23.2493.1417" timestamp="1576756964013" />
+    <state width="738" height="1071" key="GridCell.Tab.0.bottom/0.23.2489.1417@0.23.2489.1417" timestamp="1576854245786" />
+    <state width="738" height="1071" key="GridCell.Tab.0.bottom/0.23.2491.1417@0.23.2491.1417" timestamp="1576852094278" />
+    <state width="738" height="1071" key="GridCell.Tab.0.bottom/0.23.2493.1417@0.23.2493.1417" timestamp="1576850022357" />
     <state width="738" height="1071" key="GridCell.Tab.0.bottom/0.23.2495.1417@0.23.2495.1417" timestamp="1576767763199" />
     <state width="2178" height="411" key="GridCell.Tab.0.bottom/0.23.2497.1417@0.23.2497.1417" timestamp="1576770391258" />
     <state width="738" height="632" key="GridCell.Tab.0.bottom/0.23.2499.1417@0.23.2499.1417" timestamp="1576762890416" />
-    <state width="738" height="1071" key="GridCell.Tab.0.center" timestamp="1576791405314">
+    <state width="738" height="1071" key="GridCell.Tab.0.center" timestamp="1576854245785">
       <screen x="0" y="23" width="2489" height="1417" />
     </state>
-    <state width="738" height="1071" key="GridCell.Tab.0.center/0.23.2489.1417@0.23.2489.1417" timestamp="1576791405314" />
-    <state width="738" height="1071" key="GridCell.Tab.0.center/0.23.2491.1417@0.23.2491.1417" timestamp="1576791292690" />
-    <state width="738" height="1071" key="GridCell.Tab.0.center/0.23.2493.1417@0.23.2493.1417" timestamp="1576756964012" />
+    <state width="738" height="1071" key="GridCell.Tab.0.center/0.23.2489.1417@0.23.2489.1417" timestamp="1576854245785" />
+    <state width="738" height="1071" key="GridCell.Tab.0.center/0.23.2491.1417@0.23.2491.1417" timestamp="1576852094277" />
+    <state width="738" height="1071" key="GridCell.Tab.0.center/0.23.2493.1417@0.23.2493.1417" timestamp="1576850022356" />
     <state width="738" height="1071" key="GridCell.Tab.0.center/0.23.2495.1417@0.23.2495.1417" timestamp="1576767763198" />
     <state width="2178" height="411" key="GridCell.Tab.0.center/0.23.2497.1417@0.23.2497.1417" timestamp="1576770391257" />
     <state width="738" height="632" key="GridCell.Tab.0.center/0.23.2499.1417@0.23.2499.1417" timestamp="1576762890415" />
-    <state width="738" height="1071" key="GridCell.Tab.0.left" timestamp="1576791405313">
+    <state width="738" height="1071" key="GridCell.Tab.0.left" timestamp="1576854245784">
       <screen x="0" y="23" width="2489" height="1417" />
     </state>
-    <state width="738" height="1071" key="GridCell.Tab.0.left/0.23.2489.1417@0.23.2489.1417" timestamp="1576791405313" />
-    <state width="738" height="1071" key="GridCell.Tab.0.left/0.23.2491.1417@0.23.2491.1417" timestamp="1576791292689" />
-    <state width="738" height="1071" key="GridCell.Tab.0.left/0.23.2493.1417@0.23.2493.1417" timestamp="1576756964011" />
+    <state width="738" height="1071" key="GridCell.Tab.0.left/0.23.2489.1417@0.23.2489.1417" timestamp="1576854245784" />
+    <state width="738" height="1071" key="GridCell.Tab.0.left/0.23.2491.1417@0.23.2491.1417" timestamp="1576852094277" />
+    <state width="738" height="1071" key="GridCell.Tab.0.left/0.23.2493.1417@0.23.2493.1417" timestamp="1576850022355" />
     <state width="738" height="1071" key="GridCell.Tab.0.left/0.23.2495.1417@0.23.2495.1417" timestamp="1576767763198" />
     <state width="2178" height="411" key="GridCell.Tab.0.left/0.23.2497.1417@0.23.2497.1417" timestamp="1576770391257" />
     <state width="738" height="632" key="GridCell.Tab.0.left/0.23.2499.1417@0.23.2499.1417" timestamp="1576762890414" />
-    <state width="738" height="1071" key="GridCell.Tab.0.right" timestamp="1576791405314">
+    <state width="738" height="1071" key="GridCell.Tab.0.right" timestamp="1576854245785">
       <screen x="0" y="23" width="2489" height="1417" />
     </state>
-    <state width="738" height="1071" key="GridCell.Tab.0.right/0.23.2489.1417@0.23.2489.1417" timestamp="1576791405314" />
-    <state width="738" height="1071" key="GridCell.Tab.0.right/0.23.2491.1417@0.23.2491.1417" timestamp="1576791292690" />
-    <state width="738" height="1071" key="GridCell.Tab.0.right/0.23.2493.1417@0.23.2493.1417" timestamp="1576756964013" />
+    <state width="738" height="1071" key="GridCell.Tab.0.right/0.23.2489.1417@0.23.2489.1417" timestamp="1576854245785" />
+    <state width="738" height="1071" key="GridCell.Tab.0.right/0.23.2491.1417@0.23.2491.1417" timestamp="1576852094278" />
+    <state width="738" height="1071" key="GridCell.Tab.0.right/0.23.2493.1417@0.23.2493.1417" timestamp="1576850022357" />
     <state width="738" height="1071" key="GridCell.Tab.0.right/0.23.2495.1417@0.23.2495.1417" timestamp="1576767763198" />
     <state width="2178" height="411" key="GridCell.Tab.0.right/0.23.2497.1417@0.23.2497.1417" timestamp="1576770391258" />
     <state width="738" height="632" key="GridCell.Tab.0.right/0.23.2499.1417@0.23.2499.1417" timestamp="1576762890415" />
@@ -214,11 +191,11 @@
     <state width="2178" height="411" key="GridCell.Tab.1.right/0.23.2491.1417@0.23.2491.1417" timestamp="1576278252280" />
     <state width="2178" height="411" key="GridCell.Tab.1.right/0.23.2495.1417@0.23.2495.1417" timestamp="1576767482745" />
     <state width="2178" height="411" key="GridCell.Tab.1.right/0.23.2497.1417@0.23.2497.1417" timestamp="1576770391259" />
-    <state x="951" y="676" key="com.intellij.ide.util.TipDialog" timestamp="1576791381418">
+    <state x="951" y="676" key="com.intellij.ide.util.TipDialog" timestamp="1576839180040">
       <screen x="0" y="23" width="2489" height="1417" />
     </state>
-    <state x="951" y="676" key="com.intellij.ide.util.TipDialog/0.23.2489.1417@0.23.2489.1417" timestamp="1576791381418" />
-    <state x="952" y="676" key="com.intellij.ide.util.TipDialog/0.23.2491.1417@0.23.2491.1417" timestamp="1576743229535" />
+    <state x="951" y="676" key="com.intellij.ide.util.TipDialog/0.23.2489.1417@0.23.2489.1417" timestamp="1576839180040" />
+    <state x="952" y="676" key="com.intellij.ide.util.TipDialog/0.23.2491.1417@0.23.2491.1417" timestamp="1576836640748" />
     <state x="998" y="402" key="run.anything.popup" timestamp="1576777634695">
       <screen x="0" y="23" width="2491" height="1417" />
     </state>

@@ -12,21 +12,21 @@
 
 #include "lem_in.h"
 
-int				lem_close(void *data)
+int			lem_close(void *data)
 {
 	(void)data;
 	exit(EXIT_SUCCESS);
 }
 
-void			ft_error(char *message)
+void		ft_error(char *message)
 {
 	ft_putendl_fd(message, 2);
 	exit(EXIT_FAILURE);
 }
 
-void			ft_free_char_arr(char ***arr)
+void		ft_free_char_arr(char ***arr)
 {
-	int			i;
+	int		i;
 
 	i = 0;
 	if (*arr)
@@ -38,9 +38,9 @@ void			ft_free_char_arr(char ***arr)
 	}
 }
 
-void			ft_swap(void **a, void **b)
+void		ft_swap(void **a, void **b)
 {
-	void		*tmp_a;
+	void	*tmp_a;
 
 	tmp_a = *a;
 	*a = *b;

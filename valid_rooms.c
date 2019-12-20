@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 00:58:56 by bpole             #+#    #+#             */
-/*   Updated: 2019/12/19 00:59:07 by bpole            ###   ########.fr       */
+/*   Updated: 2019/12/20 17:13:11 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char			**valid_rooms(t_lem *lem)
 		ft_free_char_arr(&str);
 		return (NULL);
 	}
-	if (!valid_rooms_while(str, i, j))
+	if (!lem->v && !valid_rooms_while(str, i, j))
 		return (NULL);
 	check_l_or_hash_in_name(str[0][0]);
 	return (str);

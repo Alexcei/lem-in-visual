@@ -6,7 +6,7 @@
 /*   By: wtorwold <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 16:04:04 by wtorwold          #+#    #+#             */
-/*   Updated: 2019/12/19 18:00:02 by bpole            ###   ########.fr       */
+/*   Updated: 2019/12/20 17:09:18 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,8 @@ static void		count_size(t_data *data)
 {
 	data->width = data->lem->max_x - data->lem->min_x;
 	data->height = data->lem->max_y - data->lem->min_y;
-	data->camera->zoom = FT_MIN(WIDTH / data->width / 2, HEIGHT / data->height / 2);
+	data->camera->zoom = FT_MIN(WIDTH / data->width / 2,
+			HEIGHT / data->height / 2);
 }
 
 void			ft_parse_file(t_data *data)
@@ -70,7 +71,8 @@ void			ft_parse_file(t_data *data)
 		ft_error("ERROR: first line is empty");
 	parse_ants(data->lem);
 	parse_rooms(data->lem);
-	valid_rooms2(data->lem);
+	if (!data->lem->v)
+		valid_rooms2(data->lem);
 	parse_links(data->lem);
 	if (data->lem->v)
 		count_size(data);

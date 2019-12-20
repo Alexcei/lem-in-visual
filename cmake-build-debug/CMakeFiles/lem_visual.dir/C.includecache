@@ -36,7 +36,23 @@ math.h
 time.h
 -
 
-/Users/bpole/CLionProjects/lem_visual/print_result.c
+/Users/bpole/CLionProjects/lem_visual/main.c
+lem_in.h
+/Users/bpole/CLionProjects/lem_visual/lem_in.h
+
+/Users/bpole/CLionProjects/lem_visual/parse.c
+lem_in.h
+/Users/bpole/CLionProjects/lem_visual/lem_in.h
+
+/Users/bpole/CLionProjects/lem_visual/parse_link.c
+lem_in.h
+/Users/bpole/CLionProjects/lem_visual/lem_in.h
+
+/Users/bpole/CLionProjects/lem_visual/valid_links.c
+lem_in.h
+/Users/bpole/CLionProjects/lem_visual/lem_in.h
+
+/Users/bpole/CLionProjects/lem_visual/valid_rooms.c
 lem_in.h
 /Users/bpole/CLionProjects/lem_visual/lem_in.h
 

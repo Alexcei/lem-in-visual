@@ -6,7 +6,7 @@
 /*   By: wtorwold <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/10 20:43:35 by wtorwold          #+#    #+#             */
-/*   Updated: 2019/12/19 00:56:32 by bpole            ###   ########.fr       */
+/*   Updated: 2019/12/20 17:06:54 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,6 @@ void			parse_links(t_lem *lem)
 		}
 		add_links(lem);
 	}
-	check_duplicate_links(lem->links);
+	if (!lem->v)
+		check_duplicate_links(lem->links);
 }

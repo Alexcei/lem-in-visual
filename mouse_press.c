@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   mouse_press.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/19 18:29:08 by bpole             #+#    #+#             */
+/*   Updated: 2019/12/19 18:29:52 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
 
 static void		zoom(int key, t_data *data)
@@ -19,7 +31,7 @@ static void		view_up(t_data *data)
 	data->camera->x_offset = WIDTH / 2;
 	data->camera->y_offset = HEIGHT / 2;
 	data->camera->zoom = FT_MIN(WIDTH / data->width / 2,
-			HEIGHT / data->height / 2);
+								HEIGHT / data->height / 2);
 	data->camera->alpha = 0;
 	data->camera->beta = 0;
 }
